@@ -8,7 +8,6 @@ export default function Navbar() {
         <ul className="flex gap-6 font-medium text-sm">
           <li><Link href="/" className="hover:text-teal-400 transition">Home</Link></li>
           <li><Link href="/blog" className="hover:text-teal-400 transition">Blog</Link></li>
-          <li><Link href="/about" className="hover:text-teal-400 transition">About</Link></li>
         </ul>
       </div>
     </nav>
