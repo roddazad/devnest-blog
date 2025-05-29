@@ -1,6 +1,13 @@
 
 import Link from 'next/link';
 
+
+export const metadata = {
+  title: 'DevNest Blog | Home',
+  description: 'Browse our latest articles on development, design, and innovation.',
+};
+
+
 async function getPosts() {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
   return res.json();

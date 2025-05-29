@@ -1,4 +1,14 @@
 import Link from 'next/link';
+
+export async function generateMetadata({ params }) {
+  const post = await getPost(params.id);
+
+  return {
+    title: `${post.title} | DevNest Blog`,
+    description: post.body.slice(0, 100),
+  };
+}
+
 export async function generateStaticParams() {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
   const posts = await res.json();
